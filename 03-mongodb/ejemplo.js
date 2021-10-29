@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const conexion= "mongodb+srv://root:root123@cluster0.jcxnv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 
 /* mongoose.connect(conexion).then(respuesta=>{
