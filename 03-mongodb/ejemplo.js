@@ -2,19 +2,30 @@ const mongoose = require("mongoose");
 const conexion= "mongodb+srv://root:root123@cluster0.jcxnv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 
-mongoose.connect(conexion).then(respuesta=>{
+/* mongoose.connect(conexion).then(respuesta=>{
     //console.log(respuesta)
 }).catch(error=>{
     //console.log(error);
-})
+}) */
 
-const Usuario =  mongoose.model("Usuario", {nombre:String});
+(async () => {
+    const estadoo = await mongoose.connect(conexion)
 
-const usuario1=  new Usuario({nombre:"Web2"});
+    const Usuario =  mongoose.model("Usuario", {nombre:String});
 
-usuario1.save();
+    const usuario1=  new Usuario({nombre:"Prueba 5"});
 
-Usuario.find().then(console.log);
+    const guardarUsuario = await usuario1.save()
+
+    const resultado = await Usuario.find()
+    console.log(resultado);
+})();
+
+
+
+/* usuario1.save();
+
+Usuario.find().then(console.log); */
 
 
 
