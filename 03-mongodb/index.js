@@ -37,6 +37,7 @@ cron.schedule("* * * * *", async () => {
         await Noticias.create(arregloNoticias)
     } catch(error) {
         console.log(error);
+
     }
 });
 
