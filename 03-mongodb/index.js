@@ -35,6 +35,7 @@ cron.schedule("* * * * *", async () => {
 
         //agregar a la base de datos
         await Noticias.create(arregloNoticias)
+
     } catch(error) {
         console.log(error);
 

@@ -10,3 +10,4 @@ const NoticiasSchema = new Schema(
         timestamps: { createdAt: true, updatedAt: true }
     }
 )
+module.exports = mongoose.model('Noticias', NoticiasSchema)
